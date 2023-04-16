@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitae0946613690a589c28222f7b7f87a37
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/insta/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/insta/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -42,7 +52,8 @@ class ComposerStaticInitae0946613690a589c28222f7b7f87a37
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$classMap;
 

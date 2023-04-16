@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($vendorDir . '/insta/php-classes/src'),
+    'App\\' => array($vendorDir . '/insta/php-classes/src'),
 );

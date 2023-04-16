@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\insta\\php-classes\\src"
+            "App\\": "vendor\\insta\\php-classes\\src"
         }
     }
 }

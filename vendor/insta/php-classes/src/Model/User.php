@@ -256,13 +256,7 @@ class User extends Model {
 				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir senha do Site Instagram", "forgot", array(
 					"name"=>$data['desperson'],
 					"link"=>$link
-				));				
-
-				//$sendgrid = new \SendGrid(/*getenv*/('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'));
-
-				//$sendgrid->send();
-
-				//$mailer->send();
+				));
 
 				return $link;
 

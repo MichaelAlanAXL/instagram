@@ -4,9 +4,22 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitae0946613690a589c28222f7b7f87a37
+class ComposerStaticInit0b968f58b727f4815ecdee809cf66ddd
 {
+    public static $files = array (
+        '79f66bc0a1900f77abe4a9a299057a0a' => __DIR__ . '/..' . '/starkbank/ecdsa/src/ellipticcurve.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'SendGrid\\Stats\\' => 15,
+            'SendGrid\\Mail\\' => 14,
+            'SendGrid\\Helper\\' => 16,
+            'SendGrid\\EventWebhook\\' => 22,
+            'SendGrid\\Contacts\\' => 18,
+            'SendGrid\\' => 9,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,6 +27,30 @@ class ComposerStaticInitae0946613690a589c28222f7b7f87a37
     );
 
     public static $prefixDirsPsr4 = array (
+        'SendGrid\\Stats\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/stats',
+        ),
+        'SendGrid\\Mail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/mail',
+        ),
+        'SendGrid\\Helper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helper',
+        ),
+        'SendGrid\\EventWebhook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/eventwebhook',
+        ),
+        'SendGrid\\Contacts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/contacts',
+        ),
+        'SendGrid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/..' . '/insta/php-classes/src',
@@ -38,24 +75,19 @@ class ComposerStaticInitae0946613690a589c28222f7b7f87a37
     );
 
     public static $classMap = array (
+        'BaseSendGridClientInterface' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/BaseSendGridClientInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
-        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
-        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
-        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
-        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
-        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
-        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
-        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
+        'SendGrid' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
+        'TwilioEmail' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/TwilioEmail.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitae0946613690a589c28222f7b7f87a37::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0b968f58b727f4815ecdee809cf66ddd::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0b968f58b727f4815ecdee809cf66ddd::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0b968f58b727f4815ecdee809cf66ddd::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0b968f58b727f4815ecdee809cf66ddd::$classMap;
 
         }, null, ClassLoader::class);
     }

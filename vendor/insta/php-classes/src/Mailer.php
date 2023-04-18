@@ -39,7 +39,7 @@ class Mailer {
 		$this->email->addContent("text/plain", $subject);
 		$this->email->addContent("text/html", $html);
 
-		$sendgrid = new \SendGrid(/*getenv*/('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'));
+		$sendgrid = new \SendGrid(getenv("<'YOUR_API_KEY'>"));
 		try {
 			$response = $sendgrid->send($this->email);
 			print $response->statusCode() . "\n";
@@ -47,7 +47,7 @@ class Mailer {
 			print $response->body(). "\n";			
 		} catch (Exception $e) {
 			echo 'Caught exception: '. $e->getMessage()."\n";			
-		}			
+		}
 	}
 }
 
